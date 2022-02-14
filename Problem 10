@@ -1,0 +1,12 @@
+def primes(n):
+	isprime = [True] *n
+	su = 0
+	for i in range(2,n):
+		if isprime[i]:
+			su +=i
+			for d in range(i*i,n,i):
+				isprime[d]= False
+	print(su)
+
+if __name__=="__main__":
+	primes(2000000)
